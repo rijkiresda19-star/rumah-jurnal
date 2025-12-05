@@ -1,6 +1,6 @@
-# JURNAL MANAJEMEN, EKONOMI, AKUNTANSI
+# Jurnal MEA
 
-Website statis sederhana untuk berbagi artikel dan penelitian di bidang manajemen, ekonomi, dan akuntansi.
+Jurnal MEA (JURNAL MANAJEMEN, EKONOMI, AKUNTANSI) — situs untuk berbagi artikel dan penelitian di bidang manajemen, ekonomi, dan akuntansi.
 
 Live: https://rumah-jurnal-drab.vercel.app/
 

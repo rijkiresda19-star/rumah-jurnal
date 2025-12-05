@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Jurnal - Tempat Berbagi Cerita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📔 Rumah Jurnal</div>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Rumah Jurnal</h1>
+            <p>Tempat terbaik untuk berbagi cerita, pemikiran, dan pengalaman Anda</p>
+            <button class="btn btn-primary" onclick="scrollToArtikel()">Baca Artikel</button>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="artikel" class="articles">
+        <div class="container">
+            <h2>Artikel Terbaru</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Perjalanan</span>
+                        <span class="date">5 Desember 2025</span>
+                    </div>
+                    <h3>Petualangan ke Gunung Bromo</h3>
+                    <p>Berbagi pengalaman mendaki gunung tertinggi di Jawa Timur dan menikmati sunrise yang menakjubkan di puncaknya.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Kehidupan</span>
+                        <span class="date">3 Desember 2025</span>
+                    </div>
+                    <h3>5 Tips Produktivitas Harian</h3>
+                    <p>Temukan cara-cara praktis untuk meningkatkan produktivitas dan manajemen waktu dalam kehidupan sehari-hari Anda.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Teknologi</span>
+                        <span class="date">1 Desember 2025</span>
+                    </div>
+                    <h3>Web Development untuk Pemula</h3>
+                    <p>Panduan lengkap memulai belajar web development dengan HTML, CSS, dan JavaScript dari nol hingga mahir.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Inspirasi</span>
+                        <span class="date">28 November 2025</span>
+                    </div>
+                    <h3>Memulai Hari dengan Positif</h3>
+                    <p>Refleksi tentang pentingnya memulai hari dengan mindset positif dan gratitude untuk hidup yang lebih bermakna.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Kuliner</span>
+                        <span class="date">25 November 2025</span>
+                    </div>
+                    <h3>Resep Nasi Goreng Spesial</h3>
+                    <p>Bagaimana cara membuat nasi goreng lezat dengan bumbu khas dan rahasia resep yang telah teruji.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <span class="category">Kesehatan</span>
+                        <span class="date">22 November 2025</span>
+                    </div>
+                    <h3>Olahraga Rutin untuk Kesejahteraan</h3>
+                    <p>Manfaat olahraga teratur untuk kesehatan fisik dan mental, serta tips memulai rutinitas olahraga Anda.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="about">
+        <div class="container">
+            <h2>Tentang Rumah Jurnal</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Rumah Jurnal adalah platform komunitas untuk berbagi cerita, pengalaman, dan pemikiran. Kami percaya bahwa setiap orang memiliki kisah unik yang berharga untuk dibagikan.</p>
+                    <p>Dengan antarmuka yang sederhana dan intuitif, Anda dapat dengan mudah menulis, membaca, dan berbagi artikel dengan komunitas kami yang terus berkembang.</p>
+                    <p>Bergabunglah dengan ribuan penulis dan pembaca yang telah menemukan inspirasi di Rumah Jurnal.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">2.5K+</div>
+                        <div class="stat-label">Anggota Komunitas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">850+</div>
+                        <div class="stat-label">Artikel Dipublikasi</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">Pembaca Setia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rumah Jurnal. Semua hak dilindungi. | Dibuat dengan ❤️ untuk komunitas</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

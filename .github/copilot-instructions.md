@@ -4,109 +4,144 @@ This document provides essential context for AI agents working in this codebase.
 
 ## Project Overview
 
-**Status**: Empty workspace (ready for project initialization)
+**Status**: Active - Deployed to Vercel
 
-- **Purpose**: Learning web development project
-- **Technology Stack**: _To be populated_
-- **Main Components**: _To be populated_
+- **Purpose**: Website Rumah Jurnal - Platform komunitas untuk berbagi cerita dan pengalaman
+- **Technology Stack**: HTML5, CSS3, Vanilla JavaScript
+- **Main Components**: Navigation, Hero Section, Articles Grid, About Section, Contact Form
+- **Live URL**: https://rumah-jurnal-drab.vercel.app/
 
 ## Architecture & Key Files
 
-_Add your project architecture here, including:_
-- Core directories and their responsibilities
-- Major components/modules and how they interact
-- Key file examples that demonstrate patterns
+**Project Structure**:
+```
+rumah-jurnal/
+├── index.html         # Main HTML structure (6 article cards + contact form)
+├── styles.css         # Responsive design (mobile-first approach)
+├── script.js          # Interactivity & smooth scrolling
+├── .git/              # Git repository
+└── .github/
+	└── copilot-instructions.md
+```
 
-Example structure (replace with your actual setup):
-```
-project/
-├── src/              # Source code
-├── tests/            # Test files
-├── docs/             # Documentation
-└── config/           # Configuration files
-```
+**Key Architecture**:
+- **index.html**: 7 sections (navbar, hero, articles grid, about, contact, footer)
+- **styles.css**: CSS custom properties (--primary-color, etc), responsive grid layout
+- **script.js**: Smooth scroll navigation, form validation, intersection observer for animations
 
 ## Developer Workflows
 
-### Setup & Installation
+### Local Development
 
 ```bash
-# Add setup commands here
+# Clone repository
+git clone https://github.com/rijkiresda19-star/rumah-jurnal.git
+cd rumah-jurnal
+
+# Open in browser (macOS)
+open index.html
+
+# Or use Python server for live reload
+python3 -m http.server 8000
+# Visit http://localhost:8000
 ```
 
-### Building
+### Deployment
 
 ```bash
-# Add build commands here
+# Push changes to GitHub
+git add .
+git commit -m "Your message"
+git push origin main
+
+# Vercel auto-deploys on push to main branch
+# Watch deployment at: https://vercel.com/dashboard
 ```
 
-### Testing
-
-```bash
-# Add test commands here
-```
-
-### Debugging
-
-_Document debugging approach and tools used:_
-- IDE configuration
-- Debug command examples
-- Log locations/patterns
+### Debugging in Browser
+- Open DevTools: `Cmd + Option + I` (macOS) or `F12`
+- Check Console for JavaScript errors
+- Inspect Elements to debug CSS layout
+- Network tab untuk melihat file loading
 
 ## Code Patterns & Conventions
 
-### File Organization
+### CSS Architecture
+- **CSS Variables**: All colors in `:root` selector (--primary-color, --secondary-color, etc)
+- **Responsive Grid**: `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))`
+- **Mobile-First**: @media queries start at 768px then 480px breakpoints
+- **Hover Effects**: All interactive elements have `transition: all 0.3s ease`
 
-_Document how files are organized and named in this project._
+### JavaScript Patterns
+- **Smooth Scrolling**: All navigation links use `scrollIntoView({ behavior: 'smooth' })`
+- **Form Handling**: Submit events use `event.preventDefault()` + validation
+- **DOM Observers**: `IntersectionObserver` untuk scroll animations
+- **Event Listeners**: DOMContentLoaded untuk initialize pada saat page load
 
-### Naming Conventions
-
-_Include patterns for:_
-- Variables and functions
-- Classes and interfaces
-- Files and directories
-
-### Common Patterns
-
-_List project-specific patterns like:_
-- Component structure
-- Error handling approach
-- Configuration management
-- Data flow patterns
+### Article Card Structure (Repeatable)
+```html
+<article class="article-card">
+	<div class="article-header">
+		<span class="category">Kategori</span>
+		<span class="date">Tanggal</span>
+	</div>
+	<h3>Judul Artikel</h3>
+	<p>Deskripsi singkat...</p>
+	<a href="#" class="read-more">Baca Selengkapnya →</a>
+</article>
+```
 
 ## Integration Points & Dependencies
 
-### External Services
+### Deployment Pipeline
+- **GitHub**: Source code repository (rijkiresda19-star/rumah-jurnal)
+- **Vercel**: Auto-deploys on push to main branch
+- **DNS**: Vercel provides default .vercel.app domain
+- **No External APIs**: Currently static content only
 
-_Document external integrations:_
-- APIs being used
-- Authentication methods
-- Data sync patterns
-
-### Internal Dependencies
-
-_Document dependencies between modules/services:_
-- Which components communicate with each other
-- Message/data formats used
-- Cross-cutting concerns
+### Future Integration Points (When Needed)
+- Backend API for CRUD articles (currently hardcoded in HTML)
+- Database connection (MongoDB/Firebase for storing articles)
+- Email service for contact form submissions (Mailgun/SendGrid)
+- User authentication (Firebase Auth/Auth0)
 
 ## Critical Knowledge
 
-_Add important information here that isn't obvious from code inspection:_
-- Performance considerations
-- Security requirements
-- Scalability concerns
-- Development environment quirks
+### Performance
+- No build step needed - runs directly in browser
+- CSS animations use GPU acceleration (transform, opacity)
+- Intersection Observer для lazy-loading animations (optional)
+
+### Current Limitations
+- All data is hardcoded in HTML (6 sample articles)
+- Contact form doesn't actually send emails (validation only)
+- No user authentication or persistent storage
+
+### Next Steps for Enhancement
+1. Add backend API (Node.js/Express)
+2. Connect to database (MongoDB/Firebase)
+3. Implement real contact form submission
+4. Add admin panel for article management
+5. User authentication & profiles
 
 ## Common Pitfalls
 
-_Document mistakes to avoid:_
-- Breaking existing patterns
-- Performance issues
-- Security vulnerabilities specific to this project
+### Things to Avoid
+- **Don't hardcode colors**: Use CSS variables instead (use --primary-color)
+- **Don't break grid layout**: Maintain `repeat(auto-fit, minmax(320px, 1fr))` pattern
+- **Don't remove smooth scroll**: Keep `behavior: 'smooth'` for UX consistency
+- **Don't forget mobile breakpoints**: Always test at 768px and 480px
+- **Don't change category colors without updating all instances**: Use CSS classes
+
+### Git Workflow
+- Always push to `main` branch (Vercel listens to main)
+- Don't commit node_modules or build artifacts
+- Include meaningful commit messages
 
 ---
 
-**Last Updated**: December 5, 2025
+**Last Updated**: December 5, 2025 - Deployment Complete
 
-To update this file, review the actual codebase structure and populate each section with concrete examples and details specific to your project.
+**Website Status**: ✅ LIVE on Vercel
+**GitHub Repo**: https://github.com/rijkiresda19-star/rumah-jurnal
+**Deployment URL**: https://rumah-jurnal-drab.vercel.app/

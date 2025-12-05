@@ -6,7 +6,7 @@ This document provides essential context for AI agents working in this codebase.
 
 **Status**: Active - Deployed to Vercel
 
-- **Purpose**: Website Rumah Jurnal - Platform komunitas untuk berbagi cerita dan pengalaman
+- **Purpose**: JURNAL MANAJEMEN, EKONOMI, AKUNTANSI - situs untuk berbagi artikel dan penelitian di bidang manajemen, ekonomi, dan akuntansi
 - **Technology Stack**: HTML5, CSS3, Vanilla JavaScript
 - **Main Components**: Navigation, Hero Section, Articles Grid, About Section, Contact Form
 - **Live URL**: https://rumah-jurnal-drab.vercel.app/

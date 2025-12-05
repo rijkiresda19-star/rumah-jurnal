@@ -1,6 +1,6 @@
-# Rumah Jurnal
+# JURNAL MANAJEMEN, EKONOMI, AKUNTANSI
 
-Website statis sederhana untuk komunitas berbagi cerita.
+Website statis sederhana untuk berbagi artikel dan penelitian di bidang manajemen, ekonomi, dan akuntansi.
 
 Live: https://rumah-jurnal-drab.vercel.app/
 

@@ -1,3 +1,4 @@
+
 name: CI
 
 on:
@@ -7,19 +8,29 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  lint:
+    name: Lint (HTML / CSS / JS)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node (for potential future linting)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Run basic checks
-        run: |
-          echo "Running basic CI checks"
-          # placeholder for linters/tests (no dependencies required)
-          echo "ok"
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linters
+        run: npm run lint
+

@@ -11,7 +11,7 @@
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f9fafb;
-    --bg-white: #ffffff;
+    --bg-white: #fff;
     --border-color: #e5e7eb;
     --success: #10b981;
 }
@@ -32,7 +32,7 @@ body {
 /* Navigation */
 .navbar {
     background-color: var(--bg-white);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -79,14 +79,14 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    animation: slideInDown 0.8s ease;
+    animation: slide-in-down 0.8s ease;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
-    animation: slideInUp 0.8s ease;
+    animation: slide-in-up 0.8s ease;
 }
 
 /* Buttons */
@@ -110,7 +110,7 @@ body {
 .btn-primary:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 20px rgb(99 102 241 / 30%);
 }
 
 /* Articles Section */
@@ -142,7 +142,7 @@ body {
 
 .article-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
 }
 
 .article-header {
@@ -346,22 +346,24 @@ body {
 }
 
 /* Animations */
-@keyframes slideInDown {
+@keyframes slide-in-down {
     from {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes slideInUp {
+@keyframes slide-in-up {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -369,7 +371,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -411,7 +413,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .hero-content h1 {
         font-size: 1.5rem;
     }
